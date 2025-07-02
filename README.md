@@ -132,11 +132,10 @@ This is the logic that watches for login events and triggers the email.
 ---
 Now that everything is connected, it’s time to test.
 
-Sign out of your AWS Console
+1. Sign out of your AWS Console
+2. Sign back in with your root account
+3. Within a minute or two, you should receive an email alert
 
-Sign back in with your root account
-
-Within a minute or two, you should receive an email alert
 
 > **Email alert received** 
 <img src="https://github.com/user-attachments/assets/1c683508-a715-41ad-9c66-07f531050588"/>

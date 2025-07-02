@@ -9,20 +9,6 @@ Whether it's a root account or an IAM user, this setup will notify you in realti
 
 ---
 
-## 🧠 Why I Built This
-
-One of the first things I wanted to monitor in my AWS account was **login activity**.  
-Who logged in? When? Was it the root user?
-
-AWS gives us all the tools — we just need to connect them properly.
-
-So I decided to build a simple system that:
-- Logs every console login
-- Detects when a login happens
-- Sends me an email alert instantly
-
----
-
 ## 🗂️ What You’ll Be Using
 
 Here are the 3 AWS services powering this alert system:
@@ -39,8 +25,10 @@ Everything is native to AWS, and works perfectly together.
 
 Here’s a high-level look at how everything connects.
 
-> **architecture diagram**  
-> ![Architecture](screenshots/architecture.png)
+> **Architecture diagram**  
+![1](https://github.com/user-attachments/assets/b9065460-c314-4a0e-9fc5-58a001f6751d)
+
+
 
 1. A user logs into the AWS Console  
 2. CloudTrail captures the login event  
@@ -58,7 +46,7 @@ Here’s a high-level look at how everything connects.
 CloudTrail is the foundation. It logs all account activity including console logins.
 
 > **Insert screenshot:** CloudTrail dashboard  
-> ![CloudTrail Dashboard](screenshots/cloudtrail-dashboard.png)
+<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
 
 #### Steps:
 
@@ -72,7 +60,7 @@ CloudTrail is the foundation. It logs all account activity including console log
 8. Leave everything else as default and click **Create trail**
 
 > **Insert screenshot:** Trail configuration  
-> ![Trail Config](screenshots/trail-config.png)
+<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
 
 ---
 
@@ -81,7 +69,7 @@ CloudTrail is the foundation. It logs all account activity including console log
 Now we need a way to send the alert — that’s where SNS comes in.
 
 > **Insert screenshot:** SNS dashboard  
-> ![SNS Dashboard](screenshots/sns-dashboard.png)
+<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
 
 #### Steps:
 
@@ -92,7 +80,7 @@ Now we need a way to send the alert — that’s where SNS comes in.
 5. Leave the other settings as they are and click **Create topic**
 
 > **Insert screenshot:** Topic created  
-> ![Topic Created](screenshots/topic-created.png)
+<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
 
 ---
 
@@ -106,7 +94,7 @@ Now we need a way to send the alert — that’s where SNS comes in.
 6. Now go to your inbox and confirm the subscription
 
 > **Insert screenshot:** Subscription created  
-> ![Subscription](screenshots/subscription-confirm.png)
+<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
 
 ---
 
@@ -115,7 +103,7 @@ Now we need a way to send the alert — that’s where SNS comes in.
 This is the logic that watches for login events and triggers the email.
 
 > **Insert screenshot:** EventBridge rule setup  
-> ![EventBridge Rule](screenshots/eventbridge-rule.png)
+<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
 
 #### Steps:
 

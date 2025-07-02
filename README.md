@@ -2,6 +2,7 @@
 
 ### [YouTube Demonstration](https://youtu.be/MEgc0qQ3yKE?si=HoNtiARV6MqGkeMB)
 
+<img src="https://github.com/user-attachments/assets/ad9a98a4-c9a2-45ef-ba37-8115876fe859"/>
 
 This project shows you how to build a simple alert system that sends you an email **whenever someone logs into your AWS account**.
 
@@ -45,8 +46,9 @@ Here’s a high-level look at how everything connects.
 
 CloudTrail is the foundation. It logs all account activity including console logins.
 
-> **Insert screenshot:** CloudTrail dashboard  
-<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
+> **CloudTrail dashboard**  
+<img src="https://github.com/user-attachments/assets/98cb7212-4761-4eb6-adbc-c72a32c69dda"/>
+
 
 #### Steps:
 
@@ -59,8 +61,9 @@ CloudTrail is the foundation. It logs all account activity including console log
 7. For API activity, select both **Read** and **Write**  
 8. Leave everything else as default and click **Create trail**
 
-> **Insert screenshot:** Trail configuration  
-<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
+> **Trail configuration** 
+<img src="(https://github.com/user-attachments/assets/ec5fc633-75b3-4dac-a34d-8f44214e9155"/>
+
 
 ---
 
@@ -68,8 +71,9 @@ CloudTrail is the foundation. It logs all account activity including console log
 
 Now we need a way to send the alert — that’s where SNS comes in.
 
-> **Insert screenshot:** SNS dashboard  
-<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
+> **SNS dashboard**   
+<img src="https://github.com/user-attachments/assets/02ad9446-2e92-49f3-9959-c303b19aefcc"/>
+
 
 #### Steps:
 
@@ -79,8 +83,9 @@ Now we need a way to send the alert — that’s where SNS comes in.
 4. Name the topic: `console-login-alerts`  
 5. Leave the other settings as they are and click **Create topic**
 
-> **Insert screenshot:** Topic created  
-<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
+> **Topic created** 
+<img src="https://github.com/user-attachments/assets/c1b6449d-57c4-455f-8c38-97e6eae61ebb"/>
+
 
 ---
 
@@ -93,8 +98,9 @@ Now we need a way to send the alert — that’s where SNS comes in.
 5. Click **Create subscription**  
 6. Now go to your inbox and confirm the subscription
 
-> **Insert screenshot:** Subscription created  
-<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
+> **Subscription created**  
+<img src="https://github.com/user-attachments/assets/5b1bc203-9ff7-45cd-afff-aaa00e4e0fc9"/>
+
 
 ---
 
@@ -102,8 +108,8 @@ Now we need a way to send the alert — that’s where SNS comes in.
 
 This is the logic that watches for login events and triggers the email.
 
-> **Insert screenshot:** EventBridge rule setup  
-<img src="https://github.com/user-attachments/assets/ddadddab-c164-43a6-a8c3-4a5a0cb46893"/>
+> **EventBridge rule setup**   
+<img src="https://github.com/user-attachments/assets/0613a303-e5df-4ea7-bef8-0bcbfb55b03d"/>
 
 #### Steps:
 
@@ -118,3 +124,5 @@ This is the logic that watches for login events and triggers the email.
   "source": ["aws.signin"],
   "detail-type": ["AWS Console Sign In via CloudTrail"]
 }
+
+

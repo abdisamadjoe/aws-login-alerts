@@ -125,6 +125,12 @@ This is the logic that watches for login events and triggers the email.
   "detail-type": ["AWS Console Sign In via CloudTrail"]
 }
 ```
+
+6. For Target, choose **SNS topic**
+7. Select **console-login-alerts**
+8. Click **Create rule**
+   
+
 ---
 
 ## 🧪 Testing

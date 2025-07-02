@@ -124,5 +124,23 @@ This is the logic that watches for login events and triggers the email.
   "source": ["aws.signin"],
   "detail-type": ["AWS Console Sign In via CloudTrail"]
 }
+```
+---
 
+## 🧪 Testing
+
+---
+Now that everything is connected, it’s time to test.
+
+Sign out of your AWS Console
+
+Sign back in with your root account
+
+Within a minute or two, you should receive an email alert
+
+> **Email alert received** 
+<img src="https://github.com/user-attachments/assets/1c683508-a715-41ad-9c66-07f531050588"/>
+
+
+If you got the email, everything is working perfectly.
 

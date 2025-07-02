@@ -26,7 +26,7 @@ Everything is native to AWS, and works perfectly together.
 Here’s a high-level look at how everything connects.
 
 > **Architecture diagram**  
-![1](https://github.com/user-attachments/assets/b9065460-c314-4a0e-9fc5-58a001f6751d)
+(https://github.com/user-attachments/assets/b9065460-c314-4a0e-9fc5-58a001f6751d)
 
 
 

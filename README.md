@@ -62,7 +62,7 @@ CloudTrail is the foundation. It logs all account activity including console log
 8. Leave everything else as default and click **Create trail**
 
 > **Trail configuration** 
-<img src="(https://github.com/user-attachments/assets/ec5fc633-75b3-4dac-a34d-8f44214e9155"/>
+<img src="("https://github.com/user-attachments/assets/c32cf4c6-b502-4e1c-8e25-9711efa5aa19"/>
 
 
 ---

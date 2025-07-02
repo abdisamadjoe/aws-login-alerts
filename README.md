@@ -1,11 +1,11 @@
 # 🔐 AWS Login Alert System with CloudTrail, EventBridge, and SNS
 
-### [YouTube Demonstration](https://youtu.be/gPJyF8NFo_g?si=6xdbhE_5vFvnW6XZ)
+### [YouTube Demonstration](https://youtu.be/MEgc0qQ3yKE?si=HoNtiARV6MqGkeMB)
 
 
 This project shows you how to build a simple alert system that sends you an email **whenever someone logs into your AWS account**.
 
-Whether it's a root account or an IAM user, this setup will notify you in realtime. It's a perfect project if you're learning **cloud security** and want something **practical and beginner-friendly**. You only need 3 AWS services — and everything is free tier eligible.
+Whether it's a root account or an IAM user, this setup will notify you in realtime. It's a perfect project if you're learning **cloud security** and want something **practical and beginner-friendly**. You only need 3 AWS services, and everything is free tier eligible.
 
 ---
 

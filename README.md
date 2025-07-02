@@ -39,7 +39,7 @@ Everything is native to AWS, and works perfectly together.
 
 Here’s a high-level look at how everything connects.
 
-> **Insert architecture diagram here**  
+> **architecture diagram**  
 > ![Architecture](screenshots/architecture.png)
 
 1. A user logs into the AWS Console  
